@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analytics Portfolio",
+    "section": "",
+    "text": "I’m Michael Udousoro, a data analyst based in the UK. Each project below starts from a real business question, uses public data, and ends with a written report, a dashboard, and a recommendation for a named stakeholder, not just a chart.\nEvery project follows the same pattern: clean SQL, a documented notebook, a one-page case study, a full written report, and where it fits, a live dashboard. The code and full write-ups are on GitHub."
+  },
+  {
+    "objectID": "index.html#the-projects",
+    "href": "index.html#the-projects",
+    "title": "Data Analytics Portfolio",
+    "section": "The projects",
+    "text": "The projects\n\nTransport — Santander Cycles Demand and Rebalancing\nWhere is Santander Cycles demand most imbalanced across London, and how should bikes be rebalanced? DuckDB analysis of 1.66 million real trips.\nSQL (DuckDB) · Python · Tableau\n\n\nHealthcare — NHS A&E National Trend and Trust Benchmarking\nWhat drives A&E 4-hour target breaches, and which trusts are the clearest outliers? A full year of NHS England’s own provider-level data.\nSQL (DuckDB) · Python · Tableau\n\n\nRetail — Olist Customer Experience, Retention & AI Sentiment\nWho are the valuable customers, does late delivery cost you a good review, and what does an AI sentiment layer on real review text add?\nSQL · Python · a pretrained NLP model · Tableau\n\n\nFinance — Credit Risk: Setting a Smarter Approval Cutoff\nCan a lender cut default losses without rejecting too many good borrowers? A logistic regression scorecard, priced as a business decision.\nSQL (DuckDB) · Python · Excel · Tableau\n\n\nMarketing — Maven Fuzzy Factory Funnel & A/B Tests\nWhich channels convert, where does the funnel leak, and did the website A/B tests actually work? A year of SQL “CEO emails” for a growing startup.\nSQL · Python · Tableau\n\n\nEnergy — Global Power Plants: the Renewable Transition\nHow far along is the world’s shift away from fossil fuel generation, and how reliable is the data behind that question? ~28,700 power plants worldwide.\nPython · Plotly · matplotlib"
+  },
+  {
+    "objectID": "projects/02-nhs.html",
+    "href": "projects/02-nhs.html",
+    "title": "NHS A&E: National Trend and Trust Benchmarking",
+    "section": "",
+    "text": "What drives A&E 4-hour target breaches, and which trusts are the clearest outliers, best and worst?\nNHS England publishes A&E performance data for every trust in the country every month. This project analyses a full year of that real, current data (April 2025 to March 2026) to answer the question a health service performance team would actually ask."
+  },
+  {
+    "objectID": "projects/02-nhs.html#findings",
+    "href": "projects/02-nhs.html#findings",
+    "title": "NHS A&E: National Trend and Trust Benchmarking",
+    "section": "Findings",
+    "text": "Findings\nNational performance has sat well below the NHS’s own standard all year, and moves with the season. 4-hour performance ranged from 71.8% to 76.6% across the 12 months, far short of the 95% standard every single month. January 2026 was the low point: 71.8% performance and 71,517 attendances waiting 12 or more hours.\n\n\n\nNational 4-hour performance and 12-hour breaches by month\n\n\nThe best-performing trusts by Type 1 percentage are children’s hospitals, a case-mix confound, not a best-practice story. Excluding Sheffield Children’s (92.4%) and Alder Hey Children’s (85.2%), Calderdale and Huddersfield leads general trusts at 83.4%. The worst general trusts sit in the low-to-mid 50s percent.\n\n\n\nBest and worst 10 trusts on Type 1 performance\n\n\nThe most severe measure, 12+ hour waits, varies about three times over by region, and trust size barely explains performance at all (a correlation of just 0.07 between average monthly Type 1 volume and 4-hour performance across 124 trusts)."
+  },
+  {
+    "objectID": "projects/02-nhs.html#live-dashboard",
+    "href": "projects/02-nhs.html#live-dashboard",
+    "title": "NHS A&E: National Trend and Trust Benchmarking",
+    "section": "Live dashboard",
+    "text": "Live dashboard\n\n\nOpen on Tableau Public ↗"
+  },
+  {
+    "objectID": "projects/02-nhs.html#a-note-on-tooling",
+    "href": "projects/02-nhs.html#a-note-on-tooling",
+    "title": "NHS A&E: National Trend and Trust Benchmarking",
+    "section": "A note on tooling",
+    "text": "A note on tooling\nThis project was originally planned as a Power BI dashboard. Power BI Desktop has no native Mac build, and Power BI’s web service needs a work or school Microsoft account rather than a personal one, so it was built in Tableau instead. Full reasoning in the project README."
+  },
+  {
+    "objectID": "projects/02-nhs.html#full-write-up",
+    "href": "projects/02-nhs.html#full-write-up",
+    "title": "NHS A&E: National Trend and Trust Benchmarking",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and recommendations\nSQL and notebook on GitHub"
+  },
+  {
+    "objectID": "projects/01-tfl.html",
+    "href": "projects/01-tfl.html",
+    "title": "Santander Cycles: Demand and Station Rebalancing",
+    "section": "",
+    "text": "Where is Santander Cycles demand most imbalanced across London, and how should bikes be rebalanced?\nSantander Cycles is London’s public bike share scheme, run by TfL. A rebalancing team has to physically move bikes between stations every day, since riders don’t naturally return bikes to where they’re needed. This project analyses 1.67 million real trips from April and May 2026, loaded into DuckDB straight from TfL’s own S3 bucket, to answer the question a network planning team would actually ask."
+  },
+  {
+    "objectID": "projects/01-tfl.html#findings",
+    "href": "projects/01-tfl.html#findings",
+    "title": "Santander Cycles: Demand and Station Rebalancing",
+    "section": "Findings",
+    "text": "Findings\nDemand follows a textbook commute pattern on weekdays, with sharp peaks at 8am and 5 to 6pm (the evening peak is the larger of the two), and a single broad midday hump on weekends that looks like leisure riding rather than commuting.\n\n\n\nDemand by hour, weekday vs weekend\n\n\nStation imbalance follows the commute, not chance. Stations that fill up with bikes over the day are almost all in the City of London financial district (Bank, Liverpool Street, Moorgate, Holborn, Monument). Stations that drain are major rail termini and park areas (both Waterloo Station docks, Hyde Park Corner, Knightsbridge, Lancaster Gate).\n\n\n\nThe most imbalanced stations, accumulating vs draining\n\n\nE-bikes, already 19% of trips, are used differently from classic bikes. They average a longer trip and are used for a round trip (same start and end station, typical of a leisure loop) less than half as often as classic bikes, 1.9% versus 3.2%, pointing to more genuine point-to-point commuting."
+  },
+  {
+    "objectID": "projects/01-tfl.html#live-dashboard",
+    "href": "projects/01-tfl.html#live-dashboard",
+    "title": "Santander Cycles: Demand and Station Rebalancing",
+    "section": "Live dashboard",
+    "text": "Live dashboard\n\n\nOpen on Tableau Public ↗"
+  },
+  {
+    "objectID": "projects/01-tfl.html#full-write-up",
+    "href": "projects/01-tfl.html#full-write-up",
+    "title": "Santander Cycles: Demand and Station Rebalancing",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and recommendations\nSQL and notebook on GitHub"
+  },
+  {
+    "objectID": "projects/04-credit-risk.html",
+    "href": "projects/04-credit-risk.html",
+    "title": "Credit Risk: Setting a Smarter Approval Cutoff",
+    "section": "",
+    "text": "Can a lender cut default losses without rejecting too many good borrowers?\nA lender wants to approve borrowers who will repay and decline borrowers who will seriously default, using only information available at application time. This project builds a simple, explainable risk score from a borrower’s credit history, using the Give Me Some Credit dataset of 150,000 borrowers, then answers where the approval cutoff should actually sit as a dollar question, not a statistics question."
+  },
+  {
+    "objectID": "projects/04-credit-risk.html#findings",
+    "href": "projects/04-credit-risk.html#findings",
+    "title": "Credit Risk: Setting a Smarter Approval Cutoff",
+    "section": "Findings",
+    "text": "Findings\nLate payment history is the strongest signal in the data. Borrowers with no 90+ day late payment default 4.63% of the time. A single such late payment already raises that to 33.66%, roughly seven times higher.\n\n\n\nDefault rate by number of 90+ day late payments\n\n\nA logistic regression scores borrowers well while staying explainable. Trained on 11 features, the model reaches an AUC of 0.85 on held-out data, meaning it correctly ranks a random defaulter as riskier than a random non-defaulter 85% of the time.\n\n\n\nWhich features actually drive the risk score\n\n\nThe right cutoff is a dollar question, not a statistics question. Under illustrative cost assumptions, rejecting anyone scored at 10% risk or higher catches 63.9% of defaults while only turning away 12.4% of good borrowers, lifting portfolio value by about $3.2 million on a 45,000-borrower test set. A more aggressive 2% cutoff catches nearly every default but destroys more value than it saves by rejecting 69.4% of good borrowers.\n\n\n\nPortfolio value at each cutoff threshold\n\n\nAn accompanying Excel scenario model makes the two cost assumptions live, editable cells."
+  },
+  {
+    "objectID": "projects/04-credit-risk.html#live-dashboard",
+    "href": "projects/04-credit-risk.html#live-dashboard",
+    "title": "Credit Risk: Setting a Smarter Approval Cutoff",
+    "section": "Live dashboard",
+    "text": "Live dashboard\n\n\nOpen on Tableau Public ↗"
+  },
+  {
+    "objectID": "projects/04-credit-risk.html#a-note-on-the-data-and-tooling",
+    "href": "projects/04-credit-risk.html#a-note-on-the-data-and-tooling",
+    "title": "Credit Risk: Setting a Smarter Approval Cutoff",
+    "section": "A note on the data and tooling",
+    "text": "A note on the data and tooling\nThis project was originally planned around Kaggle’s American Express Default Prediction dataset, which proved infeasible without Kaggle credentials (16-50GB, competition-gated). It was swapped for Give Me Some Credit, a smaller dataset with interpretable features, arguably better for a portfolio piece. It was also originally planned as a Power BI dashboard; built in Tableau instead after a Windows VM attempt to run Power BI proved impractical to drive. Full reasoning in the project README."
+  },
+  {
+    "objectID": "projects/04-credit-risk.html#full-write-up",
+    "href": "projects/04-credit-risk.html#full-write-up",
+    "title": "Credit Risk: Setting a Smarter Approval Cutoff",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and recommendations\nSQL and notebook on GitHub"
+  },
+  {
+    "objectID": "projects/05-marketing.html",
+    "href": "projects/05-marketing.html",
+    "title": "Maven Fuzzy Factory: Marketing Funnel & A/B Tests",
+    "section": "",
+    "text": "Which channels convert, where does the funnel leak, and did the website A/B tests actually work?\nMaven Fuzzy Factory is a simulated e-commerce startup selling plush toys online, launched in March 2012. Acting as its first data analyst, this project answers a year and a half of leadership’s real questions about marketing channels, bid optimisation, conversion funnel drop-off, website A/B tests, and seasonality, entirely in SQL."
+  },
+  {
+    "objectID": "projects/05-marketing.html#findings",
+    "href": "projects/05-marketing.html#findings",
+    "title": "Maven Fuzzy Factory: Marketing Funnel & A/B Tests",
+    "section": "Findings",
+    "text": "Findings\nChannel choice barely matters for new-customer conversion once repeat visitors are controlled for. gsearch and bsearch together account for about 72% of sessions, but restricted to first-time sessions, most channels converge to about 6.7-6.9% conversion.\n\n\n\nSessions by channel, and conversion for all vs new visitors\n\n\nDesktop converts far better than mobile, and billing is where visitors drop off. Desktop converts about 2.6x better than mobile on gsearch nonbrand (8.22% vs 3.18%, new visitors). Billing-to-order conversion is only 62.1%, meaning 38% of visitors who already entered shipping details abandon at payment.\n\n\n\nDevice conversion trend over time\n\n\nThe billing-page redesign is a confirmed win. The new /billing-2 page converts at 63.4% versus the original /billing’s 44.8%, an 18.6 point gain, about a 41% relative lift. Separately, /lander-3 was confirmed as a losing landing-page variant, converting at less than half the rate of /lander-2.\n\n\n\nThe conversion funnel"
+  },
+  {
+    "objectID": "projects/05-marketing.html#live-dashboard",
+    "href": "projects/05-marketing.html#live-dashboard",
+    "title": "Maven Fuzzy Factory: Marketing Funnel & A/B Tests",
+    "section": "Live dashboard",
+    "text": "Live dashboard\n\n\nOpen on Tableau Public ↗"
+  },
+  {
+    "objectID": "projects/05-marketing.html#full-write-up",
+    "href": "projects/05-marketing.html#full-write-up",
+    "title": "Maven Fuzzy Factory: Marketing Funnel & A/B Tests",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and recommendations\nSQL and notebook on GitHub"
+  },
+  {
+    "objectID": "projects/03-olist.html",
+    "href": "projects/03-olist.html",
+    "title": "Olist Retail: Customer Experience, Retention & AI Sentiment",
+    "section": "",
+    "text": "Who are the valuable customers, does a late delivery cost you a good review, and what does an AI sentiment layer on the review text add?\nOlist is a Brazilian marketplace connecting small sellers to major online storefronts. This project analyses about 99,000 real orders placed between September 2016 and October 2018, answering questions a Retention Lead, an Operations Manager, and a Category Manager would each genuinely ask."
+  },
+  {
+    "objectID": "projects/03-olist.html#findings",
+    "href": "projects/03-olist.html#findings",
+    "title": "Olist Retail: Customer Experience, Retention & AI Sentiment",
+    "section": "Findings",
+    "text": "Findings\nRepeat customers are rare but valuable, and revenue still depends on one-time buyers. Only 3.0% of customers ever place a second order. Repeat customers are worth almost twice as much individually (308 BRL average lifetime value versus 161 BRL for one-time buyers), but 94% of all revenue still comes from people who never come back.\n\n\n\nRepeat vs one-time customer value\n\n\nA late delivery is the single biggest driver of a bad review. Orders delivered after the promised date average 2.57 stars, with 54% landing at 1 or 2 stars. On-time or early orders average 4.29 stars, with only 9% that low.\n\n\n\nReview score by delivery lateness\n\n\nThe AI sentiment layer on 2,500 real Portuguese-language reviews finds a real gap between text and star rating. Direction agreement is 67.8%, and 16.9% of 4 and 5 star reviews contain text the model reads as negative, a hidden-complaint signal the star rating alone misses.\n\n\n\nAI sentiment vs star rating agreement"
+  },
+  {
+    "objectID": "projects/03-olist.html#live-dashboard",
+    "href": "projects/03-olist.html#live-dashboard",
+    "title": "Olist Retail: Customer Experience, Retention & AI Sentiment",
+    "section": "Live dashboard",
+    "text": "Live dashboard\n\n\nOpen on Tableau Public ↗"
+  },
+  {
+    "objectID": "projects/03-olist.html#full-write-up",
+    "href": "projects/03-olist.html#full-write-up",
+    "title": "Olist Retail: Customer Experience, Retention & AI Sentiment",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and recommendations\nSQL and notebook on GitHub"
+  },
+  {
+    "objectID": "projects/06-energy.html",
+    "href": "projects/06-energy.html",
+    "title": "Global Power Plants: the Renewable Transition",
+    "section": "",
+    "text": "How far along is the world’s shift away from fossil fuel electricity generation, and how reliable is the data behind that question?\nGovernments, utilities, and investors need to know how fast the world is shifting away from fossil fuel electricity generation, and where. This project analyses the World Resources Institute’s Global Power Plant Database, about 28,700 power plants in 164 countries covering roughly 80% of the world’s generation capacity, to answer that directly from the data. It began as a past university assignment, redone here independently to a professional standard rather than resubmitted."
+  },
+  {
+    "objectID": "projects/06-energy.html#findings",
+    "href": "projects/06-energy.html#findings",
+    "title": "Global Power Plants: the Renewable Transition",
+    "section": "Findings",
+    "text": "Findings\nRenewables dominate by plant count, but not by capacity. By count, renewables already make up 62% of the world’s power plants. By capacity they’re only 25%, since fossil fuel plants are on average far bigger.\n\n\n\nRenewable share of generation capacity by country\n\n\nThe renewable transition is deeply uneven across countries. The most renewable-heavy grids are hydro-rich countries (Paraguay 100%, Norway 96%, Tajikistan 88%). The least renewable are Gulf oil and gas states at or near 0%.\n\n\nFossil fuel still adds more new capacity than renewables every decade, but the gap is closing. Renewable’s share of new capacity rose from 15% in the 2000s to 28% in the 2010s (a partial decade in this data). Renewable plants are also the least documented: solar, biomass, and wind plants are missing a commissioning year for 60-64% of plants, versus 25-28% for coal and oil, which undercuts confidence in exactly how fast that transition is really moving.\n\n\n\nCapacity added by decade, fossil vs renewable"
+  },
+  {
+    "objectID": "projects/06-energy.html#full-write-up",
+    "href": "projects/06-energy.html#full-write-up",
+    "title": "Global Power Plants: the Renewable Transition",
+    "section": "Full write-up",
+    "text": "Full write-up\n\nFull report — methodology, limitations, and references\nNotebook on GitHub\n\nA live Tableau or Power BI dashboard for this project is still to come."
+  }
+]
