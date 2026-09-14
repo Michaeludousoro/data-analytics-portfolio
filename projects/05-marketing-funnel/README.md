@@ -1,6 +1,6 @@
 # Project 5 — Maven Fuzzy Factory: Marketing & Website Analytics
 
-> **Status:** in progress. Findings and recommendations are filled in as the analysis proceeds.
+> **Status:** complete. SQL analysis, notebook, dashboard, and this write-up are all finished.
 
 **Live dashboard:** [Marketing & Funnel Overview on Tableau Public](https://public.tableau.com/app/profile/michael.udousoro/viz/MavenFuzzyFactory-MarketingFunnelAnalysis/MarketingFunnelOverview)
 
@@ -90,11 +90,43 @@ variants (`/home` + 5 `/lander-N`) and two billing-page versions
 (`/billing` → `/billing-2`, a 13× volume shift) — evidence of prior A/B tests
 whose results aren't yet quantified here.
 
-4. **Evaluate the billing-page redesign** (`/billing` vs `/billing-2`) and the
-   landing-page tests (`/home` vs each `/lander-N`) directly — the data
-   suggests tests were run; we haven't yet confirmed they worked.
+4. **The billing-page redesign is a confirmed win — keep it, no action needed.**
+   `/billing-2` converts sessions that reach checkout at 63.4% vs the original
+   `/billing`'s 44.8% (+18.6pp, ~41% relative lift). The two pages were live
+   *simultaneously* for ~4 months before the original was retired, so this is
+   close to a genuine A/B result, not just "things got better over time."
 
-_(Website-test and product/seasonality sections still to come.)_
+5. **`/lander-3` is a confirmed losing landing-page variant.** It ran
+   concurrently with `/lander-2` for 18 months (same era, same conditions) and
+   converted at less than half the rate (3.39% vs 7.72%). If still live,
+   retire it. `/lander-5` (current, Aug 2014–) shows the highest raw rate
+   (10.17%) but that partly reflects running during the site's best-converting
+   era — a rigorous like-for-like comparison would need to control for time
+   period, which is a natural next analysis rather than a finished one here.
+
+6. **Lean into November–December.** Order volume spikes hard every year in
+   the run-up to Christmas (2014's December was the single highest month in
+   the dataset). Marketing budget, inventory, and staffing should be planned
+   around this, not spread evenly across the year.
+
+## Website tests
+
+| Test | Result |
+|---|---|
+| `/billing` vs `/billing-2` | `/billing-2` wins clearly: 63.4% vs 44.8% billing→order conversion, tested with a ~4-month concurrent overlap window |
+| `/lander-2` vs `/lander-3` (concurrent, Jul 2013–Dec 2014) | `/lander-2` wins clearly: 7.72% vs 3.39% |
+| `/home`, `/lander-1`, `/lander-4`, `/lander-5` | Ran in non-overlapping windows — directionally `/lander-5` (10.17%, most recent) looks strongest, but the comparison isn't era-controlled |
+
+## Products & seasonality
+
+- **Mr. Fuzzy is the flagship**: launched with the company (Mar 2012), 23,861
+  orders / $1.42M revenue — far ahead of the three later cross-sell launches,
+  mostly because it's had 3 years on the market vs their several months to a
+  year. Monthly run-rate across the three newer products is fairly consistent
+  (~165–205 orders/month each).
+- **Clear, consistent holiday seasonality**: orders spike every November–
+  December (Black Friday/Cyber Monday/Christmas gifting), then ease off into
+  the new year. December 2014 (2,314 orders) is the dataset's peak month.
 
 ## Repro
 
