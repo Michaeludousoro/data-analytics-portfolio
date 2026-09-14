@@ -8,9 +8,9 @@ and a recommendation for a named stakeholder — not just a model.
 |---|--------|-------------------|-------------|-------|
 | 1 | Transport (TfL) | Where is Santander Cycles demand most imbalanced, and how should bikes be rebalanced? | time series, geospatial, external data joins, operational KPIs | SQL, Python, Tableau |
 | 2 | Healthcare (NHS) | What drives A&E 4-hour target breaches, and which trusts are outliers? | benchmarking, regression, messy public data | SQL, Python, Power BI |
-| 3 | Retail (Olist) | Which customer segments should marketing target to lift repeat revenue? | relational SQL, cohort retention, RFM, CLV | SQL, Python, Tableau |
-| 4 | Finance (Lending Club) | Can we cut default losses without rejecting too many good borrowers? | classification as a business decision, cost-benefit, Excel modelling | SQL, Python, Excel, Power BI |
-| 5 | Marketing (Maven Fuzzy Factory) | Which channels convert, where does the funnel leak, did the launch work? | funnels, attribution, A/B testing | SQL, Python, Tableau |
+| 3 | Retail — Customer Experience & Retention (Olist) | Which customer segments should marketing target, and what is unstructured review text saying that the numbers don't? | relational SQL, cohort retention, RFM, CLV, LLM-based sentiment/topic tagging, geospatial delivery analysis | SQL, Python, an LLM API, Tableau |
+| 4 | Finance (American Express Default Prediction) | Can we cut default losses without rejecting too many good borrowers? | classification as a business decision, cost-benefit, Excel modelling | SQL, Python, Excel, Power BI |
+| 5 | Marketing (Maven Fuzzy Factory) — **done** | Which channels convert, where does the funnel leak, did the launch work, did the A/B tests work? | SQL (CTEs, window functions, conditional aggregation), funnels, attribution, A/B testing | SQL, Python, Tableau — [live dashboard](https://public.tableau.com/app/profile/michael.udousoro/viz/MavenFuzzyFactory-MarketingFunnelAnalysis/MarketingFunnelOverview) |
 
 Full write-ups: **[portfolio website](#)** _(link added once the Quarto site is published)_.
 
@@ -25,7 +25,8 @@ data-analytics-portfolio/
 ├── docs/style-guide.md   # the code standard for this repo
 ├── projects/
 │   └── NN-<name>/
-│       ├── README.md     # the one-page case study
+│       ├── README.md     # the one-page case study (60-second skim)
+│       ├── report.md     # the full written report (~1,000-2,000 words)
 │       ├── data/         # raw/ (gitignored) + processed/
 │       ├── sql/          # queries, one concern per file
 │       ├── notebooks/    # the analysis

@@ -52,6 +52,15 @@ Every project produces, without exception:
 
 - `README.md` — the one-page case study (Context, Question, Approach,
   Findings, Recommendation), with the headline number in the first two lines.
+  This is the version a recruiter skims in 60 seconds.
+- `report.md` — a proper written report (~1,000–2,000 words): executive
+  summary, methodology, one section per research question with the evidence
+  behind it, limitations, recommendations, references. This is the version
+  that demonstrates you can write a structured, evidence-backed analytical
+  narrative for a non-technical stakeholder, not just build a chart. Longer,
+  more formal projects (e.g. an assignment-style dataset) may extend this to
+  a full academic-style report with proper citations — that's a difference of
+  degree, not a different document.
 - Clean SQL in `sql/`, analysis in `notebooks/`, reusable code in `src/`.
 - A dashboard (Tableau / Power BI) with a screenshot in `outputs/`.
 - A short written recommendation aimed at a specific role
