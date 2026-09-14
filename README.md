@@ -14,7 +14,7 @@ named stakeholder, not just a model.
 | 5 | Marketing (Maven Fuzzy Factory) — **done** | Which channels convert, where does the funnel leak, did the launch work, did the A/B tests work? | SQL (CTEs, window functions, conditional aggregation), funnels, attribution, A/B testing | SQL, Python, Tableau, [live dashboard](https://public.tableau.com/app/profile/michael.udousoro/viz/MavenFuzzyFactory-MarketingFunnelAnalysis/MarketingFunnelOverview) |
 | 6 | Energy (Global Power Plant Database) — **done** | How far along is the world's shift away from fossil fuel generation, and how reliable is the data behind that question? | data cleaning and documentation, EDA, geospatial visualization, written analytical reporting | Python, Plotly, matplotlib |
 
-Full write-ups: **[portfolio website](#)** _(link added once the Quarto site is published)_.
+Full write-ups: **[portfolio website](https://michaeludousoro.github.io/data-analytics-portfolio/)**.
 
 ## Repository layout
 
