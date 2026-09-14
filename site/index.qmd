@@ -1,0 +1,64 @@
+---
+title: "Data Analytics Portfolio"
+subtitle: "Six end-to-end case studies, one per sector"
+---
+
+I'm Michael Udousoro, a data analyst based in the UK. Each project below starts
+from a real business question, uses public data, and ends with a written
+report, a dashboard, and a recommendation for a named stakeholder, not just a
+chart.
+
+Every project follows the same pattern: clean SQL, a documented notebook, a
+one-page case study, a full written report, and where it fits, a live
+dashboard. The code and full write-ups are on
+[GitHub](https://github.com/Michaeludousoro/data-analytics-portfolio).
+
+## The projects
+
+::: {.project-card}
+### [Transport — Santander Cycles Demand and Rebalancing](projects/01-tfl.qmd)
+Where is Santander Cycles demand most imbalanced across London, and how
+should bikes be rebalanced? DuckDB analysis of 1.66 million real trips.
+
+<span class="tools">SQL (DuckDB) · Python · Tableau</span>
+:::
+
+::: {.project-card}
+### [Healthcare — NHS A&E National Trend and Trust Benchmarking](projects/02-nhs.qmd)
+What drives A&E 4-hour target breaches, and which trusts are the clearest
+outliers? A full year of NHS England's own provider-level data.
+
+<span class="tools">SQL (DuckDB) · Python · Tableau</span>
+:::
+
+::: {.project-card}
+### [Retail — Olist Customer Experience, Retention & AI Sentiment](projects/03-olist.qmd)
+Who are the valuable customers, does late delivery cost you a good review,
+and what does an AI sentiment layer on real review text add?
+
+<span class="tools">SQL · Python · a pretrained NLP model · Tableau</span>
+:::
+
+::: {.project-card}
+### [Finance — Credit Risk: Setting a Smarter Approval Cutoff](projects/04-credit-risk.qmd)
+Can a lender cut default losses without rejecting too many good borrowers?
+A logistic regression scorecard, priced as a business decision.
+
+<span class="tools">SQL (DuckDB) · Python · Excel · Tableau</span>
+:::
+
+::: {.project-card}
+### [Marketing — Maven Fuzzy Factory Funnel & A/B Tests](projects/05-marketing.qmd)
+Which channels convert, where does the funnel leak, and did the website
+A/B tests actually work? A year of SQL "CEO emails" for a growing startup.
+
+<span class="tools">SQL · Python · Tableau</span>
+:::
+
+::: {.project-card}
+### [Energy — Global Power Plants: the Renewable Transition](projects/06-energy.qmd)
+How far along is the world's shift away from fossil fuel generation, and how
+reliable is the data behind that question? ~28,700 power plants worldwide.
+
+<span class="tools">Python · Plotly · matplotlib</span>
+:::

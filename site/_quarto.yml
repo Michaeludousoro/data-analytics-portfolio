@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Michael Udousoro"
+  description: "Data analyst portfolio: six end-to-end case studies across transport, healthcare, retail, finance, marketing, and energy."
+  site-url: ""
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects/01-tfl.qmd
+        text: Transport
+      - href: projects/02-nhs.qmd
+        text: Healthcare
+      - href: projects/03-olist.qmd
+        text: Retail
+      - href: projects/04-credit-risk.qmd
+        text: Finance
+      - href: projects/05-marketing.qmd
+        text: Marketing
+      - href: projects/06-energy.qmd
+        text: Energy
+    right:
+      - icon: github
+        href: https://github.com/Michaeludousoro/data-analytics-portfolio
+        aria-label: GitHub
+  page-footer:
+    left: "Michael Udousoro, data analyst"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    page-layout: article
+    anchor-sections: false
+    link-external-newwindow: true
