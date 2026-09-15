@@ -2,7 +2,7 @@
 
 > **Status:** complete. SQL analysis, notebook, scorecard model, Excel scenario model, README, full report, and a live dashboard are all finished.
 >
-> **A note on the dashboard tool:** this was originally planned as a Power BI dashboard. Power BI Desktop only runs on Windows, and its web service needs a work or school Microsoft account rather than a personal one. I set up a Windows 11 virtual machine through Parallels and installed Power BI Desktop there, but working in it was impractical: the automated tooling I used to build this portfolio could click into the VM but not type into it, real keystrokes reach a Parallels guest fine, synthetic ones sent by an automated tool don't. I built the dashboard in Tableau instead, the same tool I used for the TfL and NHS projects, which also keeps the dashboards consistent across the portfolio.
+> **A note on the dashboard tool:** this was originally planned as a Power BI dashboard. Power BI Desktop only runs on Windows, and its web service needs a work or school Microsoft account rather than a personal one. I set up a Windows 11 virtual machine through Parallels (which worked well) and installed Power BI Desktop there, but ran into keyboard input issues that made it impractical to work in reliably. I built the dashboard in Tableau instead, the same tool I used for the TfL and NHS projects, which also keeps the dashboards consistent across the portfolio.
 
 **Full report:** [report.md](report.md) is the written analysis.
 **Live dashboard:** [Credit Risk - Cutoff Analysis](https://public.tableau.com/app/profile/michael.udousoro/viz/CreditRisk-CutoffAnalysis/CreditRiskCutoffAnalysis) on Tableau Public.
